@@ -41,7 +41,7 @@ for i, smi in enumerate(smiles_list):
         "Sample_Name": f"Polymer_{i+1}",
         "SMILES": smi,
 
-        # NEW 10 FEATURES 🔥
+        # NEW 10 FEATURES
         "MolMR": Descriptors.MolMR(mol),
         "HeavyAtomMolWt": Descriptors.HeavyAtomMolWt(mol),
         "NHOHCount": Descriptors.NHOHCount(mol),
@@ -60,5 +60,5 @@ df = pd.DataFrame(data)
 
 df.to_excel("rdkit_extra_10_features.xlsx", index=False)
 
-print("✅ Additional 10 features dataset created!")
+print("Additional 10 features dataset created!")
 print("Shape:", df.shape)
